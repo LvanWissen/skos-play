@@ -494,7 +494,7 @@
 	<!-- display a concept block -->
 	<xsl:template match="disp:conceptBlock">
 		<!-- sets the id on the FO element, to be referenced in internal links -->
-		<fo:block id="{@id}">
+		<fo:block id="{@id}" linefeed-treatment="preserve">
 			<xsl:apply-templates select="disp:label" />
 			
 			<xsl:if test="disp:att">				
